@@ -100,9 +100,13 @@ footer {
     from {
         transform: rotate(0deg);
     }
-    to {
+    50% {
         transform: rotate(360deg);
         border-radius: 100%;
+    }
+    to {
+        transform: rotate(360deg);
+        border-radius: 0;
     }
 }
 
