@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h4>Click the divs to alternate between the animations</h4>
+        <div id="first-row">
+            <div id="first" class="left" onclick="changeAnimationFirst()">#400082</div>
+            <div id="second" class="bottom" onclick="changeAnimationSecond()">#7e0cf5</div>
+        </div>
+        <div id="second-row">
+            <div id="third" class="top" onclick="changeAnimationThird()">#9d65c9</div>
+            <div id="fourth" class="right" onclick="changeAnimationFourth()"> #d789d7</div>
+        </div>
+
+        <button id="refresh" onclick="history.go(0)">Refresh page</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%
+}
+
+body {
+    background: linear-gradient(to bottom right, #313131 0%, #222222 50%, #161616 100%) no-repeat;
+    min-height: 100vh;
+    color: #dddddd;
+    font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h4 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#first-row, #second-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first,
+#second,
+#third,
+#fourth {
+    width: clamp(7rem, 14vh, 14rem);
+    height: clamp(7rem, 14vh, 14rem);
+    margin: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first {
+    border-radius: 1.5rem 0 0 0;
+    background-color: #400082;
+}
+
+#second {
+    border-radius: 0 1.5rem 0 0;
+    background-color: #7e0cf5;
+}
+
+#third {
+    border-radius: 0 0 0 1.5rem;
+    background-color: #9d65c9;
+}
+
+#fourth {
+    border-radius: 0 0 1.5rem 0;
+    background-color: #d789d7;
+}
+
+#refresh {
+    border: none;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    background: #161616;
+    color: #dddddd;
+    transition: .4s;
+}
+
+#refresh:hover {
+    background: #7e0cf5;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (min-width: 425px) {
+    #first,
+    #second,
+    #third,
+    #fourth {
+        width: clamp(10rem, 20vh, 20rem);
+        height: clamp(10rem, 20vh, 20rem);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        border-radius: 100%;
+    }
+}
+
+@keyframes left{
+    from {
+        transform: translateX(-15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bottom{
+    from {
+        transform: translateY(15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes right{
+    from {
+        transform: translateX(15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes top{
+    from {
+        transform: translateY(-15rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 5000ms;
+}
+
+.left {
+    animation-name: left;
+    animation-duration: 1500ms;
+    animation-fill-mode: backwards;
+}
+
+.bottom {
+    animation-name: bottom;
+    animation-duration: 1500ms;
+    animation-fill-mode: backwards;
+}
+
+.right {
+    animation-name: right;
+    animation-duration: 1500ms;
+    animation-fill-mode: backwards;
+}
+
+.top {
+    animation-name: top;
+    animation-duration: 1500ms;
+    animation-fill-mode: backwards;
+}
